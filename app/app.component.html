@@ -1,5 +1,39 @@
 <div class="container">
-  <app-cropper-dialog (croppedImageChange)="updateImage1($event)" (widthChange)="rescale($event);"></app-cropper-dialog>
+  <div class="dropzone" fileDragDrop (filesChangeEmiter)="imageChange1($event)">
+    <div class="text-wrapper">
+      <div class="centered">
+        <input type="file" name="file" id="file" (change)="imageChange1($event)" multiple>
+        <label for="file"><span class="textLink">Select your file</span> or Drop it here!</label>
+      </div>
+    </div>
+  </div>
+  <div class="dropzone" fileDragDrop (filesChangeEmiter)="imageChange1($event)">
+    <div class="text-wrapper">
+      <div class="centered">
+        <input type="file" name="file" id="file" (change)="imageChange1($event)" multiple>
+        <label for="file"><span class="textLink">Select your file</span> or Drop it here!</label>
+      </div>
+    </div>
+  </div>
+    <div class="dropzone" fileDragDrop (filesChangeEmiter)="imageChange1($event)">
+    <div class="text-wrapper">
+      <div class="centered">
+        <input type="file" name="file" id="file" (change)="imageChange1($event)" multiple>
+        <label for="file"><span class="textLink">Select your file</span> or Drop it here!</label>
+      </div>
+    </div>
+  </div>
+    <div class="dropzone" fileDragDrop (filesChangeEmiter)="imageChange1($event)">
+    <div class="text-wrapper">
+      <div class="centered">
+        <input type="file" name="file" id="file" (change)="imageChange1($event)" multiple>
+        <label for="file"><span class="textLink">Select your file</span> or Drop it here!</label>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <app-cropper-dialog [file]="file1" (croppedImageChange)="updateImage1($event)" (widthChange)="rescale($event);"></app-cropper-dialog>
   <app-cropper-dialog (croppedImageChange)="updateImage2($event)" (widthChange)="rescale($event);"></app-cropper-dialog>
   <app-cropper-dialog (croppedImageChange)="updateImage3($event)" (widthChange)="rescale($event);"></app-cropper-dialog>
   <app-cropper-dialog (croppedImageChange)="updateImage4($event)" (widthChange)="rescale($event);"></app-cropper-dialog>

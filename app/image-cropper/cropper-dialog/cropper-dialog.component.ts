@@ -1,4 +1,10 @@
-import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+  ViewChild
+} from '@angular/core';
 import { Dimensions, ImageCroppedEvent, ImageTransform } from '../interfaces';
 import { base64ToFile } from '../utils/blob.utils';
 
@@ -10,6 +16,10 @@ import { base64ToFile } from '../utils/blob.utils';
 export class CropperDialogComponent {
   @Output() croppedImageChange = new EventEmitter<ImageCroppedEvent>();
   @Output() widthChange = new EventEmitter<number>();
+
+  @Input() set file(fileEvent) {
+    this.fileChangeEvent(fileEvent);
+  }
   imageChangedEvent: any = '';
   croppedImage: any = '';
   canvasRotation = 0;
@@ -20,6 +30,7 @@ export class CropperDialogComponent {
   transform: ImageTransform = {};
 
   fileChangeEvent(event: any): void {
+    console.log(event);
     this.imageChangedEvent = event;
   }
 
