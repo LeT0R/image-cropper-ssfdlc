@@ -51,7 +51,6 @@ export class AppComponent {
   }
 
   updateImage1(imageEvent: ImageCroppedEvent) {
-    console.log(imageEvent);
     if (imageEvent == null) {
       return;
     }
