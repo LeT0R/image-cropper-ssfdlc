@@ -15,7 +15,11 @@ export class AppComponent {
   imageEvent2: any;
   imageEvent3: any;
   imageEvent4: any;
+
 file1: any;
+file2: any;
+file3: any;
+file4: any;
 
   rescale(length) {
     const images = [
@@ -44,10 +48,6 @@ file1: any;
     a.href = img;
     a.setAttribute('download', 'composition.png');
     a.click();
-  }
-
-  imageChange1(fileEvent) {
-    this.file1 = fileEvent;
   }
 
   updateImage1(imageEvent: ImageCroppedEvent) {

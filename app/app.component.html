@@ -1,32 +1,32 @@
 <div class="container">
-  <div class="dropzone" fileDragDrop (filesChangeEmiter)="imageChange1($event)">
+  <div class="dropzone" fileDragDrop (filesChangeEmiter)="file1 = $event">
     <div class="text-wrapper">
       <div class="centered">
-        <input type="file" name="file" id="file" (change)="imageChange1($event)" multiple>
+        <input type="file" name="file" id="file" (change)="file1 = $event" multiple>
         <label for="file"><span class="textLink">Select your file</span> or Drop it here!</label>
       </div>
     </div>
   </div>
-  <div class="dropzone" fileDragDrop (filesChangeEmiter)="imageChange1($event)">
+  <div class="dropzone" fileDragDrop (filesChangeEmiter)="file2 = $event">
     <div class="text-wrapper">
       <div class="centered">
-        <input type="file" name="file" id="file" (change)="imageChange1($event)" multiple>
+        <input type="file" name="file" id="file" (change)="file2 = $event" multiple>
         <label for="file"><span class="textLink">Select your file</span> or Drop it here!</label>
       </div>
     </div>
   </div>
-    <div class="dropzone" fileDragDrop (filesChangeEmiter)="imageChange1($event)">
+    <div class="dropzone" fileDragDrop (filesChangeEmiter)="file3 = $event">
     <div class="text-wrapper">
       <div class="centered">
-        <input type="file" name="file" id="file" (change)="imageChange1($event)" multiple>
+        <input type="file" name="file" id="file" (change)="file3 = $event" multiple>
         <label for="file"><span class="textLink">Select your file</span> or Drop it here!</label>
       </div>
     </div>
   </div>
-    <div class="dropzone" fileDragDrop (filesChangeEmiter)="imageChange1($event)">
+    <div class="dropzone" fileDragDrop (filesChangeEmiter)="file4 = $event">
     <div class="text-wrapper">
       <div class="centered">
-        <input type="file" name="file" id="file" (change)="imageChange1($event)" multiple>
+        <input type="file" name="file" id="file" (change)="file4 = $event" multiple>
         <label for="file"><span class="textLink">Select your file</span> or Drop it here!</label>
       </div>
     </div>
@@ -34,9 +34,9 @@
 </div>
 <div class="container">
   <app-cropper-dialog [file]="file1" (croppedImageChange)="updateImage1($event)" (widthChange)="rescale($event);"></app-cropper-dialog>
-  <app-cropper-dialog (croppedImageChange)="updateImage2($event)" (widthChange)="rescale($event);"></app-cropper-dialog>
-  <app-cropper-dialog (croppedImageChange)="updateImage3($event)" (widthChange)="rescale($event);"></app-cropper-dialog>
-  <app-cropper-dialog (croppedImageChange)="updateImage4($event)" (widthChange)="rescale($event);"></app-cropper-dialog>
+  <app-cropper-dialog [file]="file2" (croppedImageChange)="updateImage2($event)" (widthChange)="rescale($event);"></app-cropper-dialog>
+  <app-cropper-dialog [file]="file3" (croppedImageChange)="updateImage3($event)" (widthChange)="rescale($event);"></app-cropper-dialog>
+  <app-cropper-dialog [file]="file4" (croppedImageChange)="updateImage4($event)" (widthChange)="rescale($event);"></app-cropper-dialog>
 </div>
 <!--<img [src]=" image1" [style.border]="image1 ? '1px solid black' : 'none'" />
   <img [src]="image2" [style.border]="image2 ? '1px solid black' : 'none'" />
