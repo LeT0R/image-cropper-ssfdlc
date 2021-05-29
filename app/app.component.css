@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+}
+
+.canvas {
+  border: black solid 1px;
+  zoom: 0.2;
+}
+
+.btn {
+  font-size: 4rem;
+  padding: 1rem;
+  margin: 1rem;
+}

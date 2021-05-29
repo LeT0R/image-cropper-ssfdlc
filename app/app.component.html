@@ -1,0 +1,15 @@
+<div class="container">
+  <app-cropper-dialog (croppedImageChange)="updateImage1($event)" (widthChange)="rescale($event);"></app-cropper-dialog>
+  <app-cropper-dialog (croppedImageChange)="updateImage2($event)" (widthChange)="rescale($event);"></app-cropper-dialog>
+  <app-cropper-dialog (croppedImageChange)="updateImage3($event)" (widthChange)="rescale($event);"></app-cropper-dialog>
+  <app-cropper-dialog (croppedImageChange)="updateImage4($event)" (widthChange)="rescale($event);"></app-cropper-dialog>
+</div>
+<!--<img [src]=" image1" [style.border]="image1 ? '1px solid black' : 'none'" />
+  <img [src]="image2" [style.border]="image2 ? '1px solid black' : 'none'" />
+  <br>
+  <img [src]="image3" [style.border]="image3 ? '1px solid black' : 'none'" />
+  <img [src]="image4" [style.border]="image4 ? '1px solid black' : 'none'" />-->
+
+<button class="btn" (click)="download()"> Download </button>
+<br>
+<canvas id="mycanvas" class="canvas" [width]="width" [height]="height"></canvas>
