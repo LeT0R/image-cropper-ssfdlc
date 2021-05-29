@@ -16,10 +16,10 @@ export class AppComponent {
   imageEvent3: any;
   imageEvent4: any;
 
-file1: any;
-file2: any;
-file3: any;
-file4: any;
+  file1: any;
+  file2: any;
+  file3: any;
+  file4: any;
 
   rescale(length) {
     const images = [
@@ -51,6 +51,7 @@ file4: any;
   }
 
   updateImage1(imageEvent: ImageCroppedEvent) {
+    console.log(imageEvent);
     if (imageEvent == null) {
       return;
     }
@@ -88,9 +89,6 @@ file4: any;
     var image = new Image(croppedImageEvent.width, croppedImageEvent.height);
     image.onload = () => {
       context.fillRect(width, height, this.width / 2, this.height / 2);
-      console.log('fillRect', width, height, this.width / 2, this.height / 2);
-      console.log('width', this.width);
-      console.log('height', this.height);
       context.drawImage(image, width, height, this.width / 2, this.height / 2);
       console.log(croppedImageEvent);
     };

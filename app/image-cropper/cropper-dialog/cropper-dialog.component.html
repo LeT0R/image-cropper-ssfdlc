@@ -15,10 +15,11 @@
 <button (click)="zoomOut()">Zoom -</button> <button (click)="zoomIn()">Zoom +</button>
 
 <div>
-  <image-cropper [imageChangedEvent]="imageChangedEvent" [maintainAspectRatio]="true"
-    [containWithinAspectRatio]="containWithinAspectRatio" [aspectRatio]="4 / 3" [resizeToWidth]="256"
-    [cropperMinWidth]="128" [onlyScaleDown]="true" [roundCropper]="false" [canvasRotation]="canvasRotation"
-    [transform]="transform" [alignImage]="'left'" [style.display]="showCropper ? null : 'none'" format="png"
+  <image-cropper [imageChangedEvent]="imageChangedEvent" [maintainAspectRatio]="true" [format]="jpeg"
+    [containWithinAspectRatio]="containWithinAspectRatio" [aspectRatio]="3 / 2" [cropperMinWidth]="128"
+    [onlyScaleDown]="true" [roundCropper]="false" [canvasRotation]="canvasRotation" [transform]="transform"
+    [alignImage]="'left'" [style.display]="showCropper ? null : 'none'" format="png"
     (imageCropped)="imageCropped($event)" (imageLoaded)="imageLoaded()" (cropperReady)="cropperReady($event)"
     (loadImageFailed)="loadImageFailed()"></image-cropper>
+  <!-- [resizeToWidth]="256"-->
 </div>
